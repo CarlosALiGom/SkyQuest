@@ -5,7 +5,7 @@ export const initialCityState: CityStateStructure = {
   city: "",
   cords: {
     lat: "",
-    lng: "",
+    lon: "",
   },
 };
 

@@ -2,11 +2,11 @@ export interface CityStateStructure {
   city: string;
   cords: {
     lat: string;
-    lng: string;
+    lon: string;
   };
 }
 
 export interface CordsStructure {
   lat: string;
-  lng: string;
+  lon: string;
 }

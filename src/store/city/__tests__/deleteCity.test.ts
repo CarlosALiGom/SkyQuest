@@ -11,7 +11,7 @@ describe("Given a deleteCity reducer", () => {
         city: "Barcelona",
         cords: {
           lat: "10.256154",
-          lng: "45.256482",
+          lon: "45.256482",
         },
       };
 
