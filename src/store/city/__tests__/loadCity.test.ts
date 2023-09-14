@@ -14,7 +14,7 @@ describe("Given a load reducer", () => {
         city: newCity,
         cords: {
           lat: "",
-          lng: "",
+          lon: "",
         },
       };
 

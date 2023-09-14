@@ -10,7 +10,7 @@ describe("Given a loadCords reducer", () => {
     test("Then it should show a new state with the new cords", () => {
       const newCords = {
         lat: "10.256154",
-        lng: "45.256482",
+        lon: "45.256482",
       };
 
       const expectedCityState: CityStateStructure = {
