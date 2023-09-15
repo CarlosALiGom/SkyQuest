@@ -27,28 +27,27 @@ const SearchBar = (): React.ReactElement => {
   return (
     <SearchBarStyled className="form" autoComplete="off" onSubmit={handleForm}>
       <label htmlFor="city" className="form__label">
-        Search a city
+        <div className="form__control">
+          <button
+            className="form__button"
+            type="button"
+            onClick={deleteCityonClick}
+          >
+            <img src="./delete.svg" alt="delete" height={28} width={28} />
+          </button>
+          <input
+            type="text"
+            id="city"
+            className="form__input"
+            value={city}
+            onChange={onChangeData}
+            placeholder="Ej: Barcelona"
+          />
+          <button type="submit" className="form__button">
+            <img src="./favicon.svg" alt="magnifier" height={28} width={28} />
+          </button>
+        </div>
       </label>
-      <div className="form__control">
-        <button
-          className="form__button"
-          type="button"
-          onClick={deleteCityonClick}
-        >
-          <img src="./delete.svg" alt="delete" height={28} width={28} />
-        </button>
-        <input
-          type="text"
-          id="city"
-          className="form__input"
-          value={city}
-          onChange={onChangeData}
-          placeholder="Ej: Barcelona"
-        />
-        <button type="submit" className="form__button">
-          <img src="./favicon.svg" alt="magnifier" height={28} width={28} />
-        </button>
-      </div>
     </SearchBarStyled>
   );
 };
