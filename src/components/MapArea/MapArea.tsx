@@ -6,7 +6,7 @@ interface PositionStructure {
   lat: number;
   lng: number;
 }
-const Map = (): React.ReactElement => {
+const MapArea = (): React.ReactElement => {
   const cords = useAppSelector((state) => state.city.cords);
 
   const position: PositionStructure = {
@@ -45,4 +45,4 @@ const Map = (): React.ReactElement => {
   );
 };
 
-export default Map;
+export default MapArea;

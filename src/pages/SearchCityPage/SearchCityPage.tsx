@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../store";
 import useCords from "../../hooks/useCords/useCords";
 import { loadCordsActionCreator } from "../../store/city/citySlice";
 import EmptyMap from "../../components/EmptyMap/EmptyMap";
-import Map from "../../components/Map/Map";
+import MapArea from "../../components/MapArea/MapArea";
 
 const SearchCityPage = (): React.ReactElement => {
   const city = useAppSelector((state) => state.city.city);
@@ -20,7 +20,9 @@ const SearchCityPage = (): React.ReactElement => {
     })();
   }, [city, dispatch, getCityCords]);
 
-  return <>{cords.lat !== "" && cords.lon !== "" ? <Map /> : <EmptyMap />}</>;
+  return (
+    <>{cords.lat !== "" && cords.lon !== "" ? <MapArea /> : <EmptyMap />}</>
+  );
 };
 
 export default SearchCityPage;
