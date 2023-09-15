@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ContainerStyled = styled.div`
-  padding: 16px;
+  padding: 15px;
   margin: 0 auto;
 `;
 
