@@ -3,8 +3,8 @@ import styled from "styled-components";
 const SearchBarStyled = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 10px;
-  margin: 0 auto;
   padding: 15px;
   gap: 15px;
 

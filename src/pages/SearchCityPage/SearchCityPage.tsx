@@ -4,6 +4,7 @@ import useCords from "../../hooks/useCords/useCords";
 import { loadCordsActionCreator } from "../../store/city/citySlice";
 import EmptyMap from "../../components/EmptyMap/EmptyMap";
 import MapArea from "../../components/MapArea/MapArea";
+import SearchCityPageStyled from "./SearchCityPageStyled";
 
 const SearchCityPage = (): React.ReactElement => {
   const city = useAppSelector((state) => state.city.city);
@@ -21,7 +22,9 @@ const SearchCityPage = (): React.ReactElement => {
   }, [city, dispatch, getCityCords]);
 
   return (
-    <>{cords.lat !== "" && cords.lon !== "" ? <MapArea /> : <EmptyMap />}</>
+    <SearchCityPageStyled>
+      {cords.lat !== "" && cords.lon !== "" ? <MapArea /> : <EmptyMap />}
+    </SearchCityPageStyled>
   );
 };
 
